@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.view.Gravity
 import android.widget.EditText
 import android.widget.LinearLayout
+import android.widget.Spinner
 import android.widget.TextView
 
 // Si no se usa @JvmOverloads la aplicación crashea sin siquiera ejecutar nada
@@ -14,7 +15,13 @@ open class EquationLayout @JvmOverloads constructor(
     defStyleAttr: Int = 0
 )
     : LinearLayout(context,attribSet,defStyleAttr) {
+    enum class TYPE {
+        MAX,MIN
+    }
+
     val coeffInputs = mutableListOf<EditText>()
+    val eqType: TYPE? = null
+    protected lateinit var params: LayoutParams
 
     init {
         orientation = HORIZONTAL
@@ -27,10 +34,10 @@ open class EquationLayout @JvmOverloads constructor(
                 val editText = EditText(context)
                 val sumText = TextView(context)
                 sumText.text = "+"
-                val params = LinearLayout.LayoutParams(
+                params = LayoutParams(
                     0,
-                    LinearLayout.LayoutParams.WRAP_CONTENT,
-                    1f
+                    LayoutParams.WRAP_CONTENT,
+                    2f
                 )
                 params.setMargins(0, 0, 0, 20)
                 editText.layoutParams = params

@@ -11,12 +11,19 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <upvictortia.pm_ene_abr_2024.iti_271164.pi1u1.z_u1_mota_hinojosa.TestChild
+    <upvictortia.pm_ene_abr_2024.iti_271164.pi1u1.z_u1_mota_hinojosa.RestrictionLayout
         android:id="@+id/eq_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
+    <upvictortia.pm_ene_abr_2024.iti_271164.pi1u1.z_u1_mota_hinojosa.FunctionLayout
+        android:id="@+id/eq_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
 
 </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,11 +8,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         makeEquation(3)
+        makeFunction(3)
     }
 
-    private fun makeEquation(eqCount : Int) {
-        val equationLayout = findViewById<TestChild>(R.id.eq_layout)
-        equationLayout.generateInputs(eqCount)
+    private fun makeEquation(varCount : Int) {
+        val equationLayout = findViewById<RestrictionLayout>(R.id.eq_layout)
+        equationLayout.generateRestriction(varCount)
+    }
+    private fun makeFunction(varCount : Int) {
+        val functionLayout = findViewById<FunctionLayout>(R.id.eq_layout2)
+        functionLayout.generateFunction(varCount)
     }
 
     /*private fun customExample() {
