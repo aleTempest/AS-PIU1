@@ -7,14 +7,19 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        makeEquation(3)
         makeFunction(3)
+        makeContainer(3,5)
     }
 
-    private fun makeEquation(varCount : Int) {
+    private fun makeContainer(resCount : Int, varCount : Int) {
+        val resContainer = findViewById<RestrictionContainer>(R.id.res_container)
+        resContainer.generateRestrictions(resCount,varCount)
+    }
+
+    /* private fun makeEquation(varCount : Int) {
         val equationLayout = findViewById<RestrictionLayout>(R.id.eq_layout)
         equationLayout.generateRestriction(varCount)
-    }
+    }*/
     private fun makeFunction(varCount : Int) {
         val functionLayout = findViewById<FunctionLayout>(R.id.eq_layout2)
         functionLayout.generateFunction(varCount)
