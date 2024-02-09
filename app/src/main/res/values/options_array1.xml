@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="equation_type">
+        <item>Maximizar</item>
+        <item>Minimizar</item>
+    </string-array>
+</resources>

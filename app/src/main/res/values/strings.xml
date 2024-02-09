@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Z_U1_MOTA_HINOJOSA_AGUSTN_ALEJANDRO</string>
+    <string name="cu_ntas_variables_de_decisi_n_tiene_el_problema">¿Cuántas variables de decisión tiene el problema?</string>
+    <string name="cu_ntas_restricciones">¿Cuántas restricciones?</string>
+    <string name="m_todo_simplex">Método Simplex</string>
+    <string name="continuar">Continuar</string>
 </resources>

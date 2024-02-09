@@ -1,11 +1,10 @@
-package upvictortia.pm_ene_abr_2024.iti_271164.pi1u1.z_u1_mota_hinojosa
+package upvictortia.pm_ene_abr_2024.iti_271164.pi1u1.z_u1_mota_hinojosa.CustomLayouts
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.Gravity
 import android.widget.EditText
 import android.widget.LinearLayout
-import android.widget.Spinner
 import android.widget.TextView
 
 // Si no se usa @JvmOverloads la aplicación crashea sin siquiera ejecutar nada
@@ -15,12 +14,8 @@ open class EquationLayout @JvmOverloads constructor(
     defStyleAttr: Int = 0
 )
     : LinearLayout(context,attribSet,defStyleAttr) {
-    enum class TYPE {
-        MAX,MIN
-    }
 
-    val coeffInputs = mutableListOf<EditText>()
-    val eqType: TYPE? = null
+    val inputs = mutableListOf<EditText>()
     protected lateinit var params: LayoutParams
 
     init {
@@ -41,7 +36,7 @@ open class EquationLayout @JvmOverloads constructor(
                 )
                 params.setMargins(0, 0, 0, 20)
                 editText.layoutParams = params
-                coeffInputs.add(editText)
+                inputs.add(editText)
                 if (i != 0) {
                     addView(sumText)
                 }

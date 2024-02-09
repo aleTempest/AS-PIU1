@@ -1,4 +1,4 @@
-package upvictortia.pm_ene_abr_2024.iti_271164.pi1u1.z_u1_mota_hinojosa
+package upvictortia.pm_ene_abr_2024.iti_271164.pi1u1.z_u1_mota_hinojosa.CustomLayouts
 
 import android.R
 import android.content.Context
@@ -9,26 +9,22 @@ import android.widget.Spinner
 
 class RestrictionLayout(context: Context, attrs: AttributeSet? = null) : EquationLayout(context, attrs) {
     private lateinit var spinner: Spinner
-    private lateinit var restrictionValue: EditText
-
-    enum class INEQUATION_SYMBOL {
-        EQUAL,EQUAL_LESS,EQUAL_GREATER
-    }
+    private lateinit var editText: EditText
 
     fun generateRestriction(count : Int) {
         generateInputs(count)
         spinner = Spinner(context)
-        val layoutParams = LayoutParams(
+        val spinnerParams = LayoutParams(
             0,
             LayoutParams.WRAP_CONTENT,
             1f
         )
-        spinner.layoutParams = layoutParams
+        spinner.layoutParams = spinnerParams
         setSpinnerOptions(listOf("=",">=","<="))
         addView(spinner)
-        restrictionValue = EditText(context)
-        restrictionValue.layoutParams = params
-        addView(restrictionValue)
+        editText = EditText(context)
+        editText.layoutParams = params
+        addView(editText)
     }
 
     private fun setSpinnerOptions(options: List<String>) {
