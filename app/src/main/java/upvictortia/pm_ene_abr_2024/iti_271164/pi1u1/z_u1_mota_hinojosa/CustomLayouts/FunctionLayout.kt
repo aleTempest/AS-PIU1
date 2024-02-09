@@ -16,6 +16,7 @@ class FunctionLayout(context: Context, attrs: AttributeSet? = null) : EquationLa
         addView(equalityText)
     }
 
+
     /*init {
         spinner = Spinner(context)
         ArrayAdapter.createFromResource(

@@ -15,7 +15,7 @@ open class EquationLayout @JvmOverloads constructor(
 )
     : LinearLayout(context,attribSet,defStyleAttr) {
 
-    val inputs = mutableListOf<EditText>()
+    val inputs = ArrayList<EditText>()
     protected lateinit var params: LayoutParams
 
     init {
@@ -43,5 +43,16 @@ open class EquationLayout @JvmOverloads constructor(
                 addView(editText)
             }
         }
+    }
+
+    fun getVarCount() : Int {
+        return this.inputs.size
+    }
+
+    fun areFieldsNotEmpty() : Boolean {
+        for (input in inputs) {
+            if (input.text.isEmpty()) return false
+        }
+        return true
     }
 }

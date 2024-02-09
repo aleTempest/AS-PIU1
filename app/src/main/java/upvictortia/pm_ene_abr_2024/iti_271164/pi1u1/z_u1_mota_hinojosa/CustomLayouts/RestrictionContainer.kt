@@ -9,7 +9,7 @@ class RestrictionContainer @JvmOverloads constructor(
     attribSet : AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : LinearLayout(context,attribSet,defStyleAttr) {
-    private val restrictions = mutableListOf<RestrictionLayout>()
+    val restrictions = ArrayList<RestrictionLayout>()
 
     fun generateRestrictions(count : Int, varCount : Int) {
         for (i in 0 until count) {
@@ -18,4 +18,5 @@ class RestrictionContainer @JvmOverloads constructor(
             addView(res)
         }
     }
+
 }
